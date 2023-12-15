@@ -6,12 +6,12 @@ body, h1, h2, ul, li, p {
 
 body {
   font-family: Arial, sans-serif;
-  background-color: #f8f8f8;
+  background-color: #8ab661;
   color: #444;
 }
 
 header {
-  background-color: #8ab661; 
+  background-color: #f8f8f8; 
   padding: 20px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   display: flex;
@@ -41,7 +41,7 @@ nav ul li {
 
 nav ul li a {
   text-decoration: none;
-  color: #f3f8f7; 
+  color: #e52c3f; 
 }
 
 .main-container {
@@ -79,7 +79,7 @@ nav ul li a {
 
 .blog-post a {
   text-decoration: none;
-  color: #fd8764; 
+  color: #f9a72b; 
   font-weight: bold;
 }
 
@@ -103,12 +103,13 @@ nav ul li a {
 .about-me h2,
 .search-by-month h2 {
   margin-bottom: 10px;
+  color: #e52c3f;
 }
 
 
 footer {
-  background-color: #8ab661; 
+  background-color: #f8f8f8; 
   text-align: center;
   padding: 10px;
-  color: #fff; 
+  color: #f9a72b; 
 }
