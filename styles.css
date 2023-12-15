@@ -1,4 +1,3 @@
-/* Reset some default styles */
 body, h1, h2, ul, li, p {
   margin: 0;
   padding: 0;
@@ -99,6 +98,30 @@ nav ul li a {
   padding: 15px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
+
+.about-me {
+  background-color: #fff;
+  margin-bottom: 20px;
+  padding: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.about-me h2 {
+  margin-bottom: 10px;
+  color: #e52c3f;
+}
+
+.about-me img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.about-me p {
+  color: #555;
+  line-height: 1.5;
+}
+
 
 .about-me h2,
 .search-by-month h2 {
