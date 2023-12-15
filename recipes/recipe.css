@@ -1,0 +1,141 @@
+body, h1, h2, ul, li, p {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #8ab661;
+    color: #444;
+  }
+  
+  header {
+    background-color: #f8f8f8; 
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+  }
+  
+  .logo {
+    margin-bottom: 20px; 
+  }
+  
+  header img {
+    width: 350px; 
+    height: auto;
+    margin-right: 20px; 
+  }
+  
+  nav ul {
+    list-style: none;
+    margin-left: 30px;
+  }
+  
+  nav ul li {
+    display: inline;
+    margin-right: 30px;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: #e52c3f; 
+  }
+  
+  .main-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .main-content {
+    display: flex;
+  }
+  
+  .blog-posts {
+    flex: 3;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+  }
+  
+  .blog-post {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+  }
+  
+  .blog-post h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+  }
+  
+  .blog-post p {
+    color: #555;
+    margin-bottom: 15px;
+  }
+  
+  .blog-post a {
+    text-decoration: none;
+    color: #f9a72b; 
+    font-weight: bold;
+  }
+  
+  .blog-post a:hover {
+    text-decoration: underline;
+  }
+  
+  .sidebar {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  .about-me,
+  .search-by-month {
+    background-color: #fff;
+    margin-bottom: 20px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+  }
+  
+  .about-me {
+    background-color: #fff;
+    margin-bottom: 20px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .about-me h2 {
+    margin-bottom: 10px;
+    color: #e52c3f;
+  }
+  
+  .about-me img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  
+  .about-me p {
+    color: #555;
+    line-height: 1.5;
+  }
+  
+  
+  .about-me h2,
+  .search-by-month h2 {
+    margin-bottom: 10px;
+    color: #e52c3f;
+  }
+  
+  
+  footer {
+    background-color: #f8f8f8; 
+    text-align: center;
+    padding: 10px;
+    color: #f9a72b; 
+  }
+  
