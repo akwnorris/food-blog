@@ -87,6 +87,10 @@ nav ul li a {
     margin-bottom: 15px;
 }
 
+ul {
+    padding-left: 40px; 
+}
+
 .sidebar {
     flex: 1;
     padding: 20px;
