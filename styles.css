@@ -93,7 +93,7 @@ nav ul li a {
 }
 
 .about-me,
-.search-by-month {
+.search-by-type {
   background-color: #fff;
   margin-bottom: 20px;
   padding: 15px;
@@ -126,9 +126,13 @@ nav ul li a {
 
 
 .about-me h2,
-.search-by-month h2 {
+.search-by-type h2 {
   margin-bottom: 10px;
   color: #e52c3f;
+}
+
+.search-by-type ul {
+  padding-left: 20px; 
 }
 
 
