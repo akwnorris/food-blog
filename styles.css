@@ -1,0 +1,104 @@
+/* Reset some default styles */
+body, h1, h2, ul, li, p {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f8f8;
+  color: #444;
+}
+
+header {
+  background-color: #8ab661; 
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  font-size: 2em;
+  color: #f3f8f7; 
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #f3f8f7; 
+}
+
+.main-content {
+  display: flex;
+}
+
+.blog-posts {
+  flex: 2;
+  padding: 20px;
+}
+
+.sidebar {
+  flex: 1;
+  padding: 20px;
+}
+
+.about-me,
+.search-by-month {
+  background-color: #fff;
+  margin-bottom: 20px;
+  padding: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.about-me h2,
+.search-by-month h2 {
+  margin-bottom: 10px;
+}
+
+
+/* Style for blog posts on the landing page */
+.blog-posts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 20px;
+}
+
+.blog-post {
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.blog-post h3 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.blog-post p {
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.blog-post a {
+  text-decoration: none;
+  color: #fd8764; 
+  font-weight: bold;
+}
+
+.blog-post a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  background-color: #8ab661; 
+  text-align: center;
+  padding: 10px;
+  color: #fff; 
+}
