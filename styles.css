@@ -114,6 +114,20 @@ li:hover .dropdown {
   text-decoration: underline;
 }
 
+a:hover {
+  text-decoration: underline;
+  color: inherit; 
+}
+
+nav ul li a:hover {
+  text-decoration: none;
+}
+
+a:not(nav ul li a):hover {
+  text-decoration: underline;
+  color: #f2ef1d; 
+}
+
 .sidebar {
   flex: 1;
   padding: 20px;
