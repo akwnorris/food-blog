@@ -1,0 +1,21 @@
+[
+    {
+      "title": "Savoring Nostalgia: Spaghetti Carbonara",
+      "date": "January 5, 2023",
+      "excerpt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "link": "recipes/pasta-recipe.html"
+    },
+    {
+      "title": "Bruschetta: A Taste of Italian Sunshine",
+      "date": "February 15, 2023",
+      "excerpt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "link": "recipes/bruschetta-recipe.html"
+    },
+    {
+      "title": "Roasted Garlic Parmesan Green Beans: A College Kitchen Revelation",
+      "date": "March 20, 2023",
+      "excerpt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "link": "recipes/green-bean-recipe.html"
+    }
+  ]
+  
