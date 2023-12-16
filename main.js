@@ -1,18 +1,6 @@
 const blogPostsSection = document.getElementById("blogPosts");
-
-// Create the next and back buttons
-const nextButton = document.createElement("button");
-nextButton.textContent = "Next";
-nextButton.addEventListener("click", nextPage);
-
-const backButton = document.createElement("button");
-backButton.textContent = "Back";
-backButton.addEventListener("click", prevPage);
-
-// Insert the buttons initially, but hide the back button
-blogPostsSection.insertAdjacentElement("afterend", nextButton);
-blogPostsSection.insertAdjacentElement("afterend", backButton);
-backButton.style.display = "none"; // Hide the back button initially
+const nextButton = document.getElementById("nextButton");
+const backButton = document.getElementById("backButton");
 
 const pageSize = 3;
 let currentPage = 1;
@@ -48,10 +36,8 @@ async function displayPosts() {
     blogPostsSection.innerHTML += postHTML;
   });
 
-  // Calculate the total pages based on the number of posts
   totalPages = Math.ceil(posts.length / pageSize);
 
-  // Show/hide the next and back buttons based on available posts/pages
   if (currentPage === 1) {
     backButton.style.display = "none";
   } else {
@@ -74,5 +60,8 @@ function prevPage() {
   currentPage--;
   displayPosts();
 }
+
+nextButton.addEventListener("click", nextPage);
+backButton.addEventListener("click", prevPage);
 
 displayPosts();
