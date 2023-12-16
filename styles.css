@@ -173,9 +173,20 @@ a:not(nav ul li a):hover {
 }
 
 .search-by-type ul {
-  padding-left: 20px; 
+  padding-left: 0; 
+  list-style: none; 
 }
 
+.search-by-type li a {
+  color: #8ab661;
+  text-decoration: none; 
+}
+
+
+.search-by-type li a:hover {
+  color: #8ab661; 
+  text-decoration: none; 
+}
 
 footer {
   background-color: #f8f8f8; 
