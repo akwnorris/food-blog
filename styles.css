@@ -130,16 +130,18 @@ a:not(nav ul li a):hover {
   color: #f2ef1d; 
 }
 
-/* ... (existing CSS rules) */
+.blog-and-pagination {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
 .pagination-buttons {
-  display: flex;
-  justify-content: center;
-  margin-top: 20px; /* Adjust margin as needed */
+  text-align: center;
 }
 
 .pagination-buttons button {
-  padding: 10px 20px;
+  padding: 5px 10px;
   margin: 0 5px;
   border: none;
   background-color: #e52c3f;
@@ -153,7 +155,6 @@ a:not(nav ul li a):hover {
 .pagination-buttons button:hover {
   background-color: #d51e30;
 }
-
 
 .sidebar {
   flex: 1;
