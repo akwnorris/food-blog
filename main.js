@@ -1,11 +1,17 @@
 const blogPostsSection = document.getElementById("blogPosts");
-const nextButton = document.getElementById("nextButton");
-const backButton = document.getElementById("backButton");
+const nextButton = document.createElement("button");
+nextButton.textContent = "Next";
+nextButton.addEventListener("click", nextPage);
 
-const pageSize = 3; // Number of posts per page
+const backButton = document.createElement("button");
+backButton.textContent = "Back";
+backButton.addEventListener("click", prevPage);
+
+blogPostsSection.insertAdjacentElement("afterend", nextButton);
+blogPostsSection.insertAdjacentElement("afterend", backButton);
+
+const pageSize = 3;
 let currentPage = 1;
-let totalPages = 0;
-let postsData = []; // Store all fetched posts
 
 async function getPosts() {
   try {
@@ -18,25 +24,14 @@ async function getPosts() {
 }
 
 async function displayPosts() {
-  postsData = await getPosts(); // Fetch posts and store them
-
-  // Calculate total pages based on total posts and page size
-  totalPages = Math.ceil(postsData.length / pageSize);
-
-  // Display initial posts on first page
-  displayCurrentPage();
-}
-
-function displayCurrentPage() {
+  const posts = await getPosts();
   const startIndex = (currentPage - 1) * pageSize;
   const endIndex = startIndex + pageSize;
-  const currentPagePosts = postsData.slice(startIndex, endIndex);
+  const paginatedPosts = posts.slice(startIndex, endIndex);
 
-  // Clear the blog posts section
   blogPostsSection.innerHTML = "";
 
-  // Render current page's posts
-  currentPagePosts.forEach(post => {
+  paginatedPosts.forEach(post => {
     const postHTML = `
       <article class="blog-post">
         <h3><a href="${post.link}">${post.title}</a></h3>
@@ -47,27 +42,18 @@ function displayCurrentPage() {
     `;
     blogPostsSection.innerHTML += postHTML;
   });
-
-  // Show/hide pagination buttons based on current page
-  backButton.style.display = currentPage === 1 ? "none" : "inline-block";
-  nextButton.style.display = currentPage === totalPages ? "none" : "inline-block";
 }
 
 function nextPage() {
-  if (currentPage < totalPages) {
-    currentPage++;
-    displayCurrentPage();
-  }
+  currentPage++;
+  displayPosts();
 }
 
 function prevPage() {
   if (currentPage > 1) {
     currentPage--;
-    displayCurrentPage();
+    displayPosts();
   }
 }
-
-nextButton.addEventListener("click", nextPage);
-backButton.addEventListener("click", prevPage);
 
 displayPosts();

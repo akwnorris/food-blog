@@ -87,25 +87,11 @@ li:hover .dropdown {
 }
 
 .blog-post {
-  max-height: 300px; 
-  overflow: hidden;
-  background-color: #fff; 
+  background-color: #fff;
   padding: 20px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   margin-bottom: 20px;
-}
-
-.skeleton {
-  animation: shimmer 2s infinite linear;
-}
-
-.skeleton-title,
-.skeleton-meta,
-.skeleton-excerpt {
-  background-color: #f0f0f0; /* Color for skeleton UI */
-  height: 15px; /* Adjust as needed */
-  margin-bottom: 10px;
 }
 
 .blog-post h3 {
@@ -142,32 +128,6 @@ nav ul li a:hover {
 a:not(nav ul li a):hover {
   text-decoration: underline;
   color: #f2ef1d; 
-}
-
-.blog-and-pagination {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.pagination-buttons {
-  text-align: center;
-}
-
-.pagination-buttons button {
-  padding: 5px 10px;
-  margin: 0 5px;
-  border: none;
-  background-color: #e52c3f;
-  color: #fff;
-  font-weight: bold;
-  cursor: pointer;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-}
-
-.pagination-buttons button:hover {
-  background-color: #d51e30;
 }
 
 .sidebar {
@@ -235,13 +195,4 @@ footer {
   text-align: center;
   padding: 10px;
   color: #f9a72b; 
-}
-
-@keyframes shimmer {
-  0% {
-    background-position: -400px 0;
-  }
-  100% {
-    background-position: 400px 0;
-  }
 }
