@@ -2,9 +2,10 @@ const blogPostsSection = document.getElementById("blogPosts");
 const nextButton = document.getElementById("nextButton");
 const backButton = document.getElementById("backButton");
 
-const pageSize = 3;
+const pageSize = 3; // Number of posts per page
 let currentPage = 1;
 let totalPages = 0;
+let postsData = []; // Store all fetched posts
 
 async function getPosts() {
   try {
@@ -17,14 +18,25 @@ async function getPosts() {
 }
 
 async function displayPosts() {
-  const posts = await getPosts();
+  postsData = await getPosts(); // Fetch posts and store them
+
+  // Calculate total pages based on total posts and page size
+  totalPages = Math.ceil(postsData.length / pageSize);
+
+  // Display initial posts on first page
+  displayCurrentPage();
+}
+
+function displayCurrentPage() {
   const startIndex = (currentPage - 1) * pageSize;
   const endIndex = startIndex + pageSize;
-  const paginatedPosts = posts.slice(startIndex, endIndex);
+  const currentPagePosts = postsData.slice(startIndex, endIndex);
 
+  // Clear the blog posts section
   blogPostsSection.innerHTML = "";
 
-  paginatedPosts.forEach(post => {
+  // Render current page's posts
+  currentPagePosts.forEach(post => {
     const postHTML = `
       <article class="blog-post">
         <h3><a href="${post.link}">${post.title}</a></h3>
@@ -36,29 +48,23 @@ async function displayPosts() {
     blogPostsSection.innerHTML += postHTML;
   });
 
-  totalPages = Math.ceil(posts.length / pageSize);
-
-  if (currentPage === 1) {
-    backButton.style.display = "none";
-  } else {
-    backButton.style.display = "inline-block";
-  }
-
-  if (currentPage === totalPages) {
-    nextButton.style.display = "none";
-  } else {
-    nextButton.style.display = "inline-block";
-  }
+  // Show/hide pagination buttons based on current page
+  backButton.style.display = currentPage === 1 ? "none" : "inline-block";
+  nextButton.style.display = currentPage === totalPages ? "none" : "inline-block";
 }
 
 function nextPage() {
-  currentPage++;
-  displayPosts();
+  if (currentPage < totalPages) {
+    currentPage++;
+    displayCurrentPage();
+  }
 }
 
 function prevPage() {
-  currentPage--;
-  displayPosts();
+  if (currentPage > 1) {
+    currentPage--;
+    displayCurrentPage();
+  }
 }
 
 nextButton.addEventListener("click", nextPage);

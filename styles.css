@@ -87,11 +87,25 @@ li:hover .dropdown {
 }
 
 .blog-post {
-  background-color: #fff;
+  max-height: 300px; 
+  overflow: hidden;
+  background-color: #fff; 
   padding: 20px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   margin-bottom: 20px;
+}
+
+.skeleton {
+  animation: shimmer 2s infinite linear;
+}
+
+.skeleton-title,
+.skeleton-meta,
+.skeleton-excerpt {
+  background-color: #f0f0f0; /* Color for skeleton UI */
+  height: 15px; /* Adjust as needed */
+  margin-bottom: 10px;
 }
 
 .blog-post h3 {
@@ -221,4 +235,13 @@ footer {
   text-align: center;
   padding: 10px;
   color: #f9a72b; 
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -400px 0;
+  }
+  100% {
+    background-position: 400px 0;
+  }
 }
