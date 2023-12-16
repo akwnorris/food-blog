@@ -82,9 +82,8 @@ li:hover .dropdown {
 .blog-posts {
   flex: 3;
   padding: 20px;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-gap: 20px;
+  display: flex;
+  flex-direction: column;
 }
 
 .blog-post {
@@ -92,6 +91,7 @@ li:hover .dropdown {
   padding: 20px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
+  margin-bottom: 20px;
 }
 
 .blog-post h3 {
@@ -102,6 +102,8 @@ li:hover .dropdown {
 .blog-post p {
   color: #555;
   margin-bottom: 15px;
+  flex: 1;
+  overflow: hidden;
 }
 
 .blog-post a {
