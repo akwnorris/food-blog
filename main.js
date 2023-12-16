@@ -22,8 +22,6 @@ async function displayPosts() {
   const endIndex = startIndex + pageSize;
   const paginatedPosts = posts.slice(startIndex, endIndex);
 
-  blogPostsSection.innerHTML = "";
-
   paginatedPosts.forEach(post => {
     const postHTML = `
       <article class="blog-post">
@@ -33,11 +31,15 @@ async function displayPosts() {
         <a href="${post.link}">Read More</a>
       </article>
     `;
-    blogPostsSection.innerHTML += postHTML;
+
+    // Insert each post HTML at the end of blogPostsSection
+    blogPostsSection.insertAdjacentHTML('beforeend', postHTML);
   });
 
+  // Update the total number of pages
   totalPages = Math.ceil(posts.length / pageSize);
 
+  // Adjust the display of the pagination buttons
   if (currentPage === 1) {
     backButton.style.display = "none";
   } else {
@@ -64,4 +66,5 @@ function prevPage() {
 nextButton.addEventListener("click", nextPage);
 backButton.addEventListener("click", prevPage);
 
+// Display the initial posts
 displayPosts();
