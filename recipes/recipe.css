@@ -47,15 +47,29 @@ nav ul li a {
     display: flex;
 }
 
+.blog-posts {
+    flex: 3;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+}
+
 .blog-post {
     background-color: #fff;
     padding: 20px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
-    margin: 20px; 
-    max-width: 600px;
-    width: 100%;
-    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+.post-meta {
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.blog-title, .recipe-title, .instructions {
+    color: #f9a72b;
 }
 
 .recipe-content {
@@ -77,18 +91,8 @@ nav ul li a {
     margin-bottom: 15px;
 }
 
-.blog-post h3 {
-    font-size: 1.2em;
-    margin-bottom: 10px;
-}
-
-.blog-post p {
-    color: #555;
-    margin-bottom: 15px;
-}
-
 ul {
-    padding-left: 40px; 
+    padding-left: 40px;
 }
 
 .sidebar {
@@ -97,7 +101,7 @@ ul {
 }
 
 .about-me,
-.search-by-month {
+.search-by-type {
     background-color: #fff;
     margin-bottom: 20px;
     padding: 15px;
@@ -121,11 +125,21 @@ ul {
     width: 100%;
     height: auto;
     margin-bottom: 10px;
-  }
+}
 
 .about-me p {
     color: #555;
     line-height: 1.5;
+}
+
+.about-me h2,
+.search-by-type h2 {
+    margin-bottom: 10px;
+    color: #e52c3f;
+}
+
+.search-by-type ul {
+    padding-left: 20px;
 }
 
 footer {
