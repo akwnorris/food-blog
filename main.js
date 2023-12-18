@@ -1,14 +1,7 @@
 const blogPostsSection = document.getElementById("blogPosts");
-const nextButton = document.createElement("button");
-nextButton.textContent = "Next";
-nextButton.addEventListener("click", nextPage);
-
-const backButton = document.createElement("button");
-backButton.textContent = "Back";
-backButton.addEventListener("click", prevPage);
-
-blogPostsSection.insertAdjacentElement("afterend", nextButton);
-blogPostsSection.insertAdjacentElement("afterend", backButton);
+const paginationContainer = document.querySelector(".pagination-container");
+const nextButton = document.getElementById("nextButton");
+const backButton = document.getElementById("backButton");
 
 const pageSize = 3;
 let currentPage = 1;
@@ -55,5 +48,8 @@ function prevPage() {
     displayPosts();
   }
 }
+
+nextButton.addEventListener("click", nextPage);
+backButton.addEventListener("click", prevPage);
 
 displayPosts();
