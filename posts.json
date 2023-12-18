@@ -3,13 +3,15 @@
       "title": "Savoring Nostalgia: Spaghetti Carbonara",
       "date": "January 5, 2023",
       "excerpt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      "link": "recipes/pasta-recipe.html"
+      "link": "recipes/pasta-recipe.html",
+      "image": "../images/pasta.jpg"
     },
     {
       "title": "Bruschetta: A Taste of Italian Sunshine",
       "date": "February 15, 2023",
       "excerpt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      "link": "recipes/bruschetta-recipe.html"
+      "link": "recipes/bruschetta-recipe.html",
+      "image": "../images/bruschetta.jpg"
     },
     {
       "title": "Roasted Garlic Parmesan Green Beans: A College Kitchen Revelation",
@@ -22,13 +24,15 @@
       "title": "Crafting the Perfect Cucumber Mint Cooler",
       "date": "August 28, 2023",
       "excerpt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      "link": "recipes/drink.html"
+      "link": "recipes/drink.html",
+      "image": "../images/drink.jpg"
     },
     {
       "title": "Mastering Raspberry Lemon Bars",
       "date": "June 8, 2023",
       "excerpt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      "link": "recipes/dessert.html"
+      "link": "recipes/dessert.html",
+      "image": "../images/lemonbars.jpg"
     }  
   ]
   
