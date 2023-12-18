@@ -114,6 +114,11 @@ li:hover .dropdown {
   margin-bottom: 20px;
 }
 
+.blog-post img {
+  display: block;
+  margin: 0 auto;
+}
+
 .blog-post h3 {
   font-size: 1.2em;
   margin-bottom: 10px;
