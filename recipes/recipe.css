@@ -22,6 +22,7 @@ header {
   display: flex;
   flex-direction: column;
   align-items: left;
+  width: 100%;
 }
 
 /* Logo and Navigation */
@@ -205,4 +206,14 @@ footer {
     color: #f9a72b;
     margin-top: auto;
     width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .main-content {
+      flex-direction: column; /* Stack elements vertically */
+  }
+
+  .blog-posts {
+      padding: 10px; /* Reduce padding for smaller screens */
+  }
 }
