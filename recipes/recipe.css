@@ -23,6 +23,7 @@ header {
   flex-direction: column;
   align-items: left;
   width: 100%;
+  height: auto;
 }
 
 /* Logo and Navigation */
@@ -209,11 +210,7 @@ footer {
 }
 
 @media screen and (max-width: 768px) {
-  .main-content {
-      flex-direction: column; /* Stack elements vertically */
-  }
-
-  .blog-posts {
-      padding: 10px; /* Reduce padding for smaller screens */
+  header {
+      height: 100vh; 
   }
 }
