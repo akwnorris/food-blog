@@ -84,7 +84,7 @@ li:hover .dropdown {
 }
 
 .main-content {
-  display: flex;
+  flex: 1;
   display: flex;
 }
 
@@ -203,4 +203,6 @@ footer {
     text-align: center;
     padding: 10px;
     color: #f9a72b;
+    margin-top: auto;
+    width: 100%;
 }
