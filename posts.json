@@ -25,7 +25,8 @@
       "date": "August 28, 2023",
       "excerpt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
       "link": "recipes/drink.html",
-      "image": "images/drink.jpg"
+      "image": "images/drink.jpg",
+      "tags": ["Drinks"]
     },
     {
       "title": "Mastering Raspberry Lemon Bars",
