@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ruth's Recipe Roundup</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="images/logo-transparent-png.png" alt="Ruth's Recipe Roundup Logo">
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li>
+            <a href="#">Recipes</a>
+            <ul class="dropdown">
+              <li><a href="#">Appetizers</a></li>
+              <li><a href="#">Main Dishes</a></li>
+              <li><a href="#">Side Dishes</a></li>
+              <li><a href="#">Dessert</a></li>
+              <li><a href="#">Drinks</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Recipe Roulette</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <div class="content-container">
+      <div id="filteredPostsContainer">
+        <!-- Tagged posts will be dynamically loaded here -->
+      </div>
+    </div>
+
+
+    <aside class="sidebar">
+        <div class="about-me">
+            <img src="images/ruth.jpg" alt="Ruth In The Kitchen">
+            <h2>Nice to meet you!</h2>
+            <p>I'm Ruth, a passionate cook exploring the world of flavors one recipe at a time. I believe in the magic of homemade meals and love sharing my culinary adventures with you!</p>
+          </div>
+
+      <div class="search-by-type">
+        <h2>Looking For Something?</h2>
+          <ul>
+            <li><a href="#">Appetizers</a></li>
+            <li><a href="#">Main Dishes</a></li>
+            <li><a href="#">Side Dishes</a></li>
+            <li><a href="#">Dessert</a></li>
+            <li><a href="#">Drinks</a></li>
+        </ul>
+      </div>
+    </aside>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 Ruth's Recipe Roundup. All rights reserved.</p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
