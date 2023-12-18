@@ -29,12 +29,14 @@ async function displayPosts() {
       <article class="blog-post">
         <h3><a href="${post.link}">${post.title}</a></h3>
         <p class="post-meta">Published on ${post.date}</p>
+        <img src="${post.image}" alt="${post.title} Image"> <!-- Add this line -->
         <p>${post.excerpt}</p>
         <a href="${post.link}">Read More</a>
       </article>
     `;
     blogPostsSection.innerHTML += postHTML;
-  });
+});
+
 }
 
 function nextPage() {

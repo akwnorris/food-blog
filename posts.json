@@ -15,7 +15,8 @@
       "title": "Roasted Garlic Parmesan Green Beans: A College Kitchen Revelation",
       "date": "March 20, 2023",
       "excerpt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      "link": "recipes/green-bean-recipe.html"
+      "link": "recipes/green-bean-recipe.html",
+      "image": "../images/greenbeans.jpg"
     },
     {
       "title": "Crafting the Perfect Cucumber Mint Cooler",
