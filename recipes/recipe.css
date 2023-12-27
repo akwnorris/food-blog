@@ -139,6 +139,17 @@ ul {
     padding-left: 40px;
 }
 
+.tag {
+  text-decoration: none;
+  color: #f9a72b;
+  font-weight: bold;
+}
+
+.blog-post a:hover {
+  text-decoration: underline;
+}
+
+
 /* Sidebar */
 .sidebar {
     flex: 1;
