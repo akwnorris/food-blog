@@ -14,25 +14,32 @@ async function displayFilteredPosts() {
         if (tag) {
             const response = await fetch('posts.json');
             const data = await response.json();
-            
+
             const filteredPosts = data.filter(post => post.tags.includes(tag));
 
             const filteredPostsSection = document.getElementById('filteredPosts');
             filteredPostsSection.innerHTML = '';
 
+            // ...
+
             filteredPosts.forEach(post => {
+                const tagsHTML = post.tags.map(tag => `<a href="tagged-posts.html?tag=${tag}">${tag}</a>`).join(', ');
+
                 const postHTML = `
-                    <article class="blog-post">
-                        <h3><a href="${post.link}">${post.title}</a></h3>
-                        <p class="post-meta">Published on ${post.date}</p>
-                        <p class="tags">Tags: <a href="#" class="tag">${post.tags}</a></p>
-                        <img src="${post.image}" alt="${post.title} Image">
-                        <p>${post.excerpt}</p>
-                        <a href="${post.link}">Read More</a>
-                    </article>
-                `;
+        <article class="blog-post">
+            <h3><a href="${post.link}">${post.title}</a></h3>
+            <p class="post-meta">Published on ${post.date}</p>
+            <p class="tags">Tags: ${tagsHTML}</p>
+            <img src="${post.image}" alt="${post.title} Image">
+            <p>${post.excerpt}</p>
+            <a href="${post.link}">Read More</a>
+        </article>
+    `;
                 filteredPostsSection.innerHTML += postHTML;
             });
+
+            // ...
+
         } else {
             // Handle case when no tag is found in the URL
             const filteredPostsSection = document.getElementById('filteredPosts');

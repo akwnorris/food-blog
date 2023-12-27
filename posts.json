@@ -5,7 +5,12 @@
       "excerpt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
       "link": "recipes/pasta-recipe.html",
       "image": "images/pasta.jpg",
-      "tags": ["Main Dishes"]
+      "tags": [
+        {
+            "name": "Main Dishes",
+            "link": "tagged-posts.html?tag=Main%20Dishes"
+        }
+    ]
     },
     {
       "title": "Bruschetta: A Taste of Italian Sunshine",
@@ -13,7 +18,12 @@
       "excerpt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
       "link": "recipes/bruschetta-recipe.html",
       "image": "images/bruschetta.jpg",
-      "tags": ["Appetizers"]
+      "tags": [
+        {
+            "name": "Appetizers",
+            "link": "tagged-posts.html?tag=Appetizers"
+        }
+    ]
     },
     {
       "title": "Roasted Garlic Parmesan Green Beans: A College Kitchen Revelation",
@@ -21,7 +31,12 @@
       "excerpt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
       "link": "recipes/green-bean-recipe.html",
       "image": "images/greenbeans.jpg",
-      "tags": ["Side Dishes"]
+      "tags": [
+        {
+            "name": "Side Dishes",
+            "link": "tagged-posts.html?tag=Side%20Dishes"
+        }
+    ]
     },
     {
       "title": "Crafting the Perfect Cucumber Mint Cooler",
@@ -29,7 +44,12 @@
       "excerpt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
       "link": "recipes/drink.html",
       "image": "images/drink.jpg",
-      "tags": ["Drinks"]
+      "tags": [
+        {
+            "name": "Drinks",
+            "link": "tagged-posts.html?tag=Drinks"
+        }
+    ]
     },
     {
       "title": "Mastering Raspberry Lemon Bars",
@@ -37,7 +57,12 @@
       "excerpt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
       "link": "recipes/dessert.html",
       "image": "images/lemonbars.jpg",
-      "tags": ["Desserts"]
+      "tags": [
+        {
+            "name": "Desserts",
+            "link": "tagged-posts.html?tag=Desserts"
+        }
+    ]
     }  
   ]
   

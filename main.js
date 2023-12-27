@@ -25,11 +25,20 @@ async function displayPosts() {
   blogPostsSection.innerHTML = "";
 
   paginatedPosts.forEach(post => {
+    const tagsHTML = post.tags.map(tag => {
+      if (typeof tag === 'object' && tag.name) {
+        return `<a href="tagged-posts.html?tag=${tag.name}">${tag.name}</a>`;
+      } else if (typeof tag === 'string') {
+        return `<a href="tagged-posts.html?tag=${tag}">${tag}</a>`;
+      }
+      return ''; // Handle other cases if needed
+    }).join(', ');
+
     const postHTML = `
       <article class="blog-post">
         <h3><a href="${post.link}">${post.title}</a></h3>
         <p class="post-meta">Published on ${post.date}</p>
-        <p class="tags">Tags: <a href="#" class="tag">${post.tags}</a></p>
+        <p class="tags">Tags: ${tagsHTML}</p>
         <img src="${post.image}" alt="${post.title} Image">
         <p>${post.excerpt}</p>
         <a href="${post.link}">Read More</a>
