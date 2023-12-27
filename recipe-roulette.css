@@ -1,0 +1,162 @@
+/* Reset and Defaults */
+body, h1, h2, ul, li, p {
+    margin: 0;
+    padding: 0;
+  }
+  
+  html, body {
+    height: 100%;
+    margin: 0;
+  }
+  
+  /* General Styles */
+  body {
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    color: #444;
+    background: linear-gradient(to bottom right, #8ab661 30%, #f8f8f8 80%);
+    background-attachment: fixed;
+    background-size: 100% 100vh;
+  }
+  
+  header {
+    background-color: #f8f8f8;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    width: 100%;
+    height: auto;
+  }
+  
+  /* Logo and Navigation */
+  .logo {
+    margin-bottom: 20px;
+  }
+  
+  header img {
+    width: 350px;
+    height: auto;
+    margin-right: 20px;
+  }
+  
+  nav ul {
+    list-style: none;
+    margin-left: 40px;
+  }
+  
+  nav ul li {
+    display: inline;
+    margin-right: 30px;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: #e52c3f;
+  }
+  
+  /* Dropdown */
+  .dropdown {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 5px 0;
+  }
+  
+  li:hover .dropdown {
+    display: block;
+  }
+  
+  .dropdown li {
+    list-style: none;
+  }
+  
+  .dropdown a {
+    display: block;
+    padding: 8px 15px;
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .dropdown a:hover {
+    background-color: #f0f0f0;
+  }
+  
+  /* Main Content */
+.main-content {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .content-container {
+    flex: 2; 
+    padding: 20px; 
+  }
+
+  .blog-post,
+  .content-container {
+    flex: 2;
+    padding: 20px; 
+  }
+  
+  /* Sidebar */
+  .sidebar {
+    flex: 0.64;
+    padding: 20px;
+  }
+  
+  .about-me,
+  .search-by-type {
+    background-color: #fff;
+    margin-bottom: 20px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+  }
+  
+  .about-me h2,
+  .search-by-type h2 {
+    margin-bottom: 10px;
+    color: #e52c3f;
+  }
+  
+  .about-me img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  
+  .about-me p {
+    color: #555;
+    line-height: 1.5;
+  }
+  
+  .search-by-type ul {
+    padding-left: 20px;
+    list-style: none;
+  }
+  
+  .search-by-type li a {
+    color: #8ab661;
+    text-decoration: none;
+  }
+  
+  .search-by-type li a:hover {
+    color: #f9a72b;
+    text-decoration: none;
+  }
+  
+  /* Footer */
+  footer {
+    flex-shrink: 0;
+    background-color: #f8f8f8;
+    text-align: center;
+    padding: 10px;
+    color: #f9a72b;
+    margin-top: auto;
+  }
+  
