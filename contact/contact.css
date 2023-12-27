@@ -30,7 +30,61 @@ body, h1, h2, ul, li, p {
     width: 100%;
     height: auto;
   }
-
+  
+  /* Logo and Navigation */
+  .logo {
+    margin-bottom: 20px;
+  }
+  
+  header img {
+    width: 350px;
+    height: auto;
+    margin-right: 20px;
+  }
+  
+  nav ul {
+    list-style: none;
+    margin-left: 40px;
+  }
+  
+  nav ul li {
+    display: inline;
+    margin-right: 30px;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: #e52c3f;
+  }
+  
+/* Dropdown */
+.dropdown {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 5px 0;
+  }
+  
+  li:hover .dropdown {
+    display: block;
+  }
+  
+  .dropdown li {
+    list-style: none;
+  }
+  
+  .dropdown a {
+    display: block;
+    padding: 8px 15px;
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .dropdown a:hover {
+    background-color: #f0f0f0;
+  }
+  
 /* Styles for the contact form */
 .contact-form {
     flex: 0.66; 
@@ -39,8 +93,6 @@ body, h1, h2, ul, li, p {
     align-items: center;
     flex-direction: column;
     padding: 20px;
-    position: relative; 
-    top: -130px; 
     margin-left: 20px; 
     margin-right: 20px; 
   }
@@ -74,61 +126,6 @@ body, h1, h2, ul, li, p {
   
   .contact-form form button:hover {
     background-color: #f9a72b;
-  }
-  
-  
-  /* Logo and Navigation */
-  .logo {
-    margin-bottom: 20px;
-  }
-  
-  header img {
-    width: 350px;
-    height: auto;
-    margin-right: 20px;
-  }
-  
-  nav ul {
-    list-style: none;
-    margin-left: 40px;
-  }
-  
-  nav ul li {
-    display: inline;
-    margin-right: 30px;
-  }
-  
-  nav ul li a {
-    text-decoration: none;
-    color: #e52c3f;
-  }
-  
-  /* Dropdown */
-  .dropdown {
-    display: none;
-    position: absolute;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    padding: 5px 0;
-  }
-  
-  li:hover .dropdown {
-    display: block;
-  }
-  
-  .dropdown li {
-    list-style: none;
-  }
-  
-  .dropdown a {
-    display: block;
-    padding: 8px 15px;
-    text-decoration: none;
-    color: #333;
-  }
-  
-  .dropdown a:hover {
-    background-color: #f0f0f0;
   }
   
   /* Main Content */
