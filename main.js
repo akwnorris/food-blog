@@ -44,6 +44,7 @@ async function displayPosts() {
 function nextPage() {
   currentPage++;
   displayPosts();
+  window.scrollTo(0, 0);
 }
 
 function prevPage() {
