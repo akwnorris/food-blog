@@ -105,8 +105,8 @@ body, h1, h2, ul, li, p {
     align-items: center;
     flex-direction: column;
     padding: 20px;
-    margin-left: 20px; 
-    margin-right: 20px; 
+    margin-top: 20px;
+    align-self: flex-start;
   }
   
   .contact-form form {
