@@ -1,10 +1,7 @@
 const blogPostsSection = document.getElementById("blogPosts");
-const paginationContainer = document.querySelector(".pagination-container");
-const nextButton = document.getElementById("nextButton");
-const backButton = document.getElementById("backButton");
-
 const pageSize = 3;
 let currentPage = 1;
+let isLoading = false;
 
 async function getPosts() {
   try {
@@ -22,8 +19,6 @@ async function displayPosts() {
   const endIndex = startIndex + pageSize;
   const paginatedPosts = posts.slice(startIndex, endIndex);
 
-  blogPostsSection.innerHTML = "";
-
   paginatedPosts.forEach(post => {
     const tagsHTML = post.tags.map(tag => `<a href="${tag.link}">${tag.name}</a>`).join(', ');
 
@@ -37,24 +32,30 @@ async function displayPosts() {
         <a href="${post.link}">Read More</a>
       </article>
     `;
-    blogPostsSection.innerHTML += postHTML;
+
+    blogPostsSection.insertAdjacentHTML('beforeend', postHTML);
   });
+
+  isLoading = false; // Set isLoading to false after displaying posts
 }
 
-function nextPage() {
-  currentPage++;
-  displayPosts();
-  window.scrollTo(0, 0);
-}
+function loadMorePosts() {
+  if (isLoading) {
+    return;
+  }
 
-function prevPage() {
-  if (currentPage > 1) {
-    currentPage--;
+  const postsHeight = blogPostsSection.clientHeight;
+  const scrollPosition = window.scrollY;
+  const windowHeight = window.innerHeight;
+
+  if (scrollPosition >= postsHeight - windowHeight - 100) {
+    isLoading = true;
+    currentPage++;
     displayPosts();
   }
 }
 
-nextButton.addEventListener("click", nextPage);
-backButton.addEventListener("click", prevPage);
+window.addEventListener("scroll", loadMorePosts);
 
+// Load the initial set of posts when the page is loaded
 displayPosts();
