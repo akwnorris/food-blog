@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Ruth's Recipe Roundup</title>
   <link rel="stylesheet" href="recipe-roulette.css">
 </head>
+
 <body>
   <header>
     <div class="logo">
@@ -30,28 +32,40 @@
   </header>
 
   <main class="main-content">
-    <div class="blog-post">
-        <h3>Recipe Roulette Coming Soon!</h3>
-        <p>Try searching by category in the meantime!</p>
+    <div class="spinner-section">
+      <h2 class="wheel-title">Need Help Deciding What To Make For Dinner? We Can Help!</h2>
+    <div class="container">
+      <div class="spinBtn">Spin</div>
+      <div class="wheel">
+        <div class="number" style="--i:1;--clr:#8ab661;"><span>Spaghetti</span></div>
+        <div class="number" style="--i:2;--clr:#f9a72b;"><span>Chicken<br>Fried Rice</span></div>
+        <div class="number" style="--i:3;--clr:#f2ef1d;"><span>Tacos</span></div>
+        <div class="number" style="--i:4;--clr:#e52c3f;"><span>Lasagna</span></div>
+        <div class="number" style="--i:5;--clr:#8ab661;"><span>Salmon<br>& Rice</span></div>
+        <div class="number" style="--i:6;--clr:#f9a72b;"><span>Meatloaf</span></div>
+        <div class="number" style="--i:7;--clr:#f2ef1d;"><span>Chili</span></div>
+        <div class="number" style="--i:8;--clr:#e52c3f;"><span>Chicken <br>& Dumplings</span></div>
       </div>
+    </div>
     </div>
 
 
     <aside class="sidebar">
-        <div class="about-me">
-            <img src="images/ruth.jpg" alt="Ruth In The Kitchen">
-            <h2>Nice to meet you!</h2>
-            <p>I'm Ruth, a passionate cook exploring the world of flavors one recipe at a time. I believe in the magic of homemade meals and love sharing my culinary adventures with you!</p>
-          </div>
+      <div class="about-me">
+        <img src="images/ruth.jpg" alt="Ruth In The Kitchen">
+        <h2>Nice to meet you!</h2>
+        <p>I'm Ruth, a passionate cook exploring the world of flavors one recipe at a time. I believe in the magic of
+          homemade meals and love sharing my culinary adventures with you!</p>
+      </div>
 
       <div class="search-by-type">
         <h2>Looking For Something?</h2>
-          <ul>
-            <li><a href="tagged-posts.html?tag=Appetizers">Appetizers</a></li>
-            <li><a href="tagged-posts.html?tag=Main%20Dishes">Main Dishes</a></li>
-            <li><a href="tagged-posts.html?tag=Side%20Dishes">Side Dishes</a></li>
-            <li><a href="tagged-posts.html?tag=Desserts">Desserts</a></li>
-            <li><a href="tagged-posts.html?tag=Drinks">Drinks</a></li>
+        <ul>
+          <li><a href="tagged-posts.html?tag=Appetizers">Appetizers</a></li>
+          <li><a href="tagged-posts.html?tag=Main%20Dishes">Main Dishes</a></li>
+          <li><a href="tagged-posts.html?tag=Side%20Dishes">Side Dishes</a></li>
+          <li><a href="tagged-posts.html?tag=Desserts">Desserts</a></li>
+          <li><a href="tagged-posts.html?tag=Drinks">Drinks</a></li>
         </ul>
       </div>
     </aside>
@@ -61,5 +75,28 @@
     <p>&copy; 2023 Ruth's Recipe Roundup. All rights reserved.</p>
   </footer>
 
+  <script>
+    const wheel = document.querySelector('.wheel');
+    const startButton = document.querySelector('.spinBtn');
+    let deg = 0;
+
+    startButton.addEventListener('click', () => {
+      startButton.style.pointerEvents = 'none';
+      deg = Math.floor(2500 + Math.random() * 2500); // Change 5000 to 2500
+      wheel.style.transition = 'all 3s ease-out';
+      wheel.style.transform = `rotate(${deg}deg)`;
+      wheel.classList.add('blur');
+    });
+
+    wheel.addEventListener('transitionend', () => {
+      wheel.classList.remove('blur');
+      startButton.style.pointerEvents = 'auto';
+      wheel.style.transition = 'none';
+      const actualDeg = deg % 360;
+      wheel.style.transform = `rotate(${actualDeg}deg)`;
+    });
+  </script>
+
 </body>
+
 </html>
