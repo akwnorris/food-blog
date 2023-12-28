@@ -177,11 +177,15 @@ li:hover .dropdown {
 
 .container .wheel .number span {
   position: relative;
+  top: 13%;
+  left: 13%;
   transform: rotate(45deg);
   font-size: 1.1em;
   font-weight: 700;
   color: #fff;
   text-shadow: 3px 5px 2 px rgba(0,0,0,0.15);
+  width: 70%;
+  word-wrap: break-word;
 }
 
 /* Sidebar */
